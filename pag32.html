@@ -1,0 +1,26 @@
+<!doctype html>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<meta charset="utf-8">
+
+<script src="//d3plus.org/js/d3.js"></script>
+<script src="//d3plus.org/js/d3plus.js"></script>
+
+<div id="viz"></div>
+  <a href="https://bolitto.github.io/pag2.html"><button class="w3-button w3-black w3-display-bottomleft" onclick="plusDivs(-1)">&#10094;</button></a href>
+  <a href="https://bolitto.github.io/pag4.html"><button class="w3-button w3-black w3-display-bottomright" onclick="plusDivs(1)">&#10095;</button></a href>
+<script>
+  var data = [
+    {"value": 28, "name": "SIPEX"},
+    {"value": 2, "name": 'PROCESSO P.M.G'},
+    {"value": 3, "name": "PROCESSO Proguaru"},
+    {"value": 40, "name": "Solicitação Verbal"}
+  ];
+  var visualization = d3plus.viz()
+    .container("#viz")
+    .data(data)
+    .type("tree_map")
+    .id("name")
+    .color("value")
+    .size("value")
+    .draw();
+</script>
