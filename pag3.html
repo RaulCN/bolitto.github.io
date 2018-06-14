@@ -10,27 +10,27 @@
   <a href="https://bolitto.github.io/pag4.html"><button class="w3-button w3-black w3-display-bottomright" onclick="plusDivs(1)">&#10095;</button></a href>
 <script>
   var data = [
-    {"value": 28, "name": "SIPEX"},
-    {"value": 2, "name": 'PROCESSO P.M.G'},
-    {"value": 3, "name": "PROCESSO Proguaru"},
-    {"value": 20, "name": "Solicitação Verbal (Diretoria Técnica)"},
-    {"value": 3, "name": "Solicitação Verbal (Diretoria Presidência)"},
-    {"value": 2, "name": "Solicitação Verbal (G.P.)",},
-    {"value": 3, "name": "Solicitação Verbal (S.P.S)"},
-    {"value": 7, "name": "Solicitação Verbal (S.O.E)"},
-    {"value": 1, "name": "Solicitação Verbal (G.O.R)"},
-    {"value": 1, "name": "Solicitação Verbal (P.C.M)"},
-    {"value": 1, "name": "Solicitação Verbal (Prefeitura)"},
-    {"value": 1, "name": "Solicitação Verbal (G.F)"},
-    {"value": 1, "name": "Solicitação Verbal (S.P.I.V)"}
-  ];
+    {"value": 28, "name": "SIPEX", "group": "SIPEX"},
+    {"value": 2, "name": 'PROCESSO P.M.G', "group": "PROCESSO P.M.G"},
+    {"value": 3, "name": "PROCESSO Proguaru", "group": "PROCESSO Proguaru"},
+    {"value": 20, "name": "Solicitação Verbal (Diretoria Técnica)", "group": "Solicitação Verbal"},
+    {"value": 3, "name": "Solicitação Verbal (Diretoria Presidência)", "group": "Solicitação Verbal"},
+    {"value": 2, "name": "Solicitação Verbal (G.P.)", "group": "Solicitação Verbal"},
+    {"value": 3, "name": "Solicitação Verbal (S.P.S)", "group": "Solicitação Verbal"},
+    {"value": 7, "name": "Solicitação Verbal (S.O.E)", "group": "Solicitação Verbal"},
+    {"value": 1, "name": "Solicitação Verbal (G.O.R)", "group": "Solicitação Verbal"},
+    {"value": 1, "name": "Solicitação Verbal (P.C.M)", "group": "Solicitação Verbal"},
+    {"value": 1, "name": "Solicitação Verbal (Prefeitura)", "group": "Solicitação Verbal"},
+    {"value": 1, "name": "Solicitação Verbal (G.F)", "group": "Solicitação Verbal"},
+    {"value": 1, "name": "Solicitação Verbal (S.P.I.V)", "group": "Solicitação Verbal"}
+  ]
   var visualization = d3plus.viz()
     .container("#viz")
     .data(data)
     .type("tree_map")
-    .id("name")
-    .color("value")
+    .id(["group","name"])
     .size("value")
-
-    .draw();
+    .labels({"align": "center", "valign": "top"})
+    .draw()
+    
 </script>
